@@ -16,6 +16,8 @@ echo -e "${BOLD_BLUE}[Question]$NC Please type name of disk where system will be
 echo ""
 read -p "> " disk_option
 
+echo "SELECTED_DISK=$disk_option" >> ./config/install.conf
+
 # format
 mkfs.ext4 $disk_option
 
